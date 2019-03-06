@@ -1,0 +1,26 @@
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "description": "OwO",
+  "main": "app.js",
+  "scripts": {
+    "test": "uh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateiadrielrafael/engine.git"
+  },
+  "keywords": [
+    "idk"
+  ],
+  "author": "Matei Adriel",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Mateiadrielrafael/engine/issues"
+  },
+  "homepage": "https://github.com/Mateiadrielrafael/engine#readme",
+  "dependencies": {
+    "lit-html": "^1.0.0",
+    "rxjs": "^6.4.0"
+  }
+}

@@ -2,9 +2,9 @@
   "name": "engine",
   "version": "1.0.0",
   "description": "OwO",
-  "main": "src/main",
+  "main": "src/main.ts",
   "scripts": {
-    "test": "uh"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,12 @@
   "dependencies": {
     "lit-html": "^1.0.0",
     "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
   }
 }

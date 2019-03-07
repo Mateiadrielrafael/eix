@@ -2,7 +2,7 @@
   "name": "engine",
   "version": "1.0.0",
   "description": "OwO",
-  "main": "app.js",
+  "main": "src/main",
   "scripts": {
     "test": "uh"
   },

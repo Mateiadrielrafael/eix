@@ -2,7 +2,7 @@
   "name": "engine",
   "version": "1.0.0",
   "description": "OwO",
-  "main": "dist/main.js",
+  "main": "src/main.js",
   "scripts": {
     "build": "tsc",
     "prepare" : "npm run build"

@@ -19,8 +19,7 @@
         "alwaysStrict": true,
         "moduleResolution": "Node",
         "experimentalDecorators": true,
-        "downlevelIteration": true,
-        "outDir": "dist"
+        "downlevelIteration": true
     },
     "include": [
         "src/*.ts"

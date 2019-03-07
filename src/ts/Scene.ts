@@ -103,7 +103,7 @@ export function Follower<T>(object: Observable<T>) {
     }
 }
 
-//TODO: remove those
-export * from "lit-html"
-export * from "rxjs"
-export { map } from "rxjs/operators"
+// //TODO: remove those
+// export * from "lit-html"
+// export * from "rxjs"
+// export { map } from "rxjs/operators"

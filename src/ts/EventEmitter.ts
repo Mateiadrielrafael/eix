@@ -24,7 +24,7 @@ export class EventEmitter<T>{
      * @param callback the handler of the event
      */
     on(key: any, callback: (data?: T) => any): Subscription {
-        return this.emitter(key).subscribe(data => callback(data))
+        return this.emitter(key).subscribe(callback)
     }
 
     /**Binds the handler to the first occurance of the event
@@ -34,7 +34,7 @@ export class EventEmitter<T>{
     once(key: any, callback: (data?: T) => any): Subscription {
         return this.emitter(key).pipe(
             take(1)
-        ).subscribe(data => callback(data))
+        ).subscribe(callback)
     }
 
     /**

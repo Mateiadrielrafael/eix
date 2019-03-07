@@ -1,7 +1,6 @@
-import { Subject, Subscription, Observable } from "rxjs";
-import { filter, take, map } from "rxjs/operators";
-import { EventEmitter } from "./EventEmitter";
-import { asyncEmitterConversionError } from "./Errors"
+import { Subject, Subscription, Observable } from "rxjs"
+import { filter, take, map } from "rxjs/operators"
+import { EventEmitter } from "./EventEmitter"
 
 export class SyncEmitter<T>{
 
@@ -23,7 +22,7 @@ export class SyncEmitter<T>{
      * @param key the name of the event
      * @param callback the handler of the event
      */
-    on(key: any, callback: (data?: T) => any):void {
+    on(key: any, callback: (data?: T) => any): void {
         if (!this.core[key]) this.core[key] = []
         this.core[key].push(callback)
     }
@@ -32,13 +31,13 @@ export class SyncEmitter<T>{
      * @param key the name of the event
      * @param callback the handler of the event
      */
-    once(key: any, callback: (data?: T) => any):void {
+    once(key: any, callback: (data?: T) => any): void {
         if (!this.core[key]) this.core[key] = []
-        const func = (data?:T) => {
+        const func = (data?: T) => {
             callback(data)
-            this.core[key].splice(this.core[key].indexOf(func),1)
+            this.core[key].splice(this.core[key].indexOf(func), 1)
         }
-        
+
         this.core[key].push(func)
     }
 
@@ -54,12 +53,12 @@ export class SyncEmitter<T>{
      * Retuns the async version of the emitter
      * All "once" events are converted to normal events
      */
-    toAsync():EventEmitter<T>{
+    toAsync(): EventEmitter<T> {
         const emitter = new EventEmitter<T>()
 
         for (let i in this.core)
             for (let j of this.core[i])
-                emitter.on(i,j)
+                emitter.on(i, j)
 
         return emitter
     }

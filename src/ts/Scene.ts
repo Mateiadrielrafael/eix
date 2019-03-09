@@ -1,5 +1,5 @@
-import { SceneManager } from "./SceneManager"
-import { html, TemplateResult } from "lit-html";
+import { SceneManager } from "./SceneManager.js"
+import { TemplateResult } from "lit-html";
 import { Observable } from "rxjs";
 import { ECS } from "./ecs.js"
 
@@ -22,6 +22,7 @@ export function Scene(options: SceneOptions) {
     return function <T extends constructable>(target: T) {
         //add funcionality to the class
         return class extends target {
+            //add ecs
             ecs = new ECS()
 
             //runs when you create a new object

@@ -7,7 +7,6 @@
             ]
         },
         "module": "es6",
-        "target": "es5",
         "removeComments": true,
         "sourceMap": true,
         "lib": [
@@ -19,7 +18,8 @@
         "alwaysStrict": true,
         "moduleResolution": "Node",
         "experimentalDecorators": true,
-        "downlevelIteration": true
+        "downlevelIteration": true,
+        "target":"es6"
     },
     "include": [
         "src/*.ts"

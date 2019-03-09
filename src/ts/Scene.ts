@@ -1,6 +1,7 @@
 import { SceneManager } from "./SceneManager"
 import { html, TemplateResult } from "lit-html";
 import { Observable } from "rxjs";
+import { ECS } from "./ecs"
 
 type constructable = { new(...args: any[]): {} }
 interface SceneOptions {
@@ -21,6 +22,8 @@ export function Scene(options: SceneOptions) {
     return function <T extends constructable>(target: T) {
         //add funcionality to the class
         return class extends target {
+            ecs = new ECS()
+
             //runs when you create a new object
             constructor(...params: any[]) {
 

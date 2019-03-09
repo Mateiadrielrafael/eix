@@ -160,6 +160,16 @@ export class FastVector extends Float32Array {
     }
 
     /**
+     * make it have magnitude 0
+     * @returns this
+     */
+    normalise():FastVector{
+        this.div(this.magnitude)
+
+        return this
+    }
+
+    /**
      * calculates the magnitude of the vector
      * @returns the length of the vector
      */

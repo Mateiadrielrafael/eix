@@ -1,7 +1,7 @@
 import { SceneManager } from "./SceneManager"
 import { html, TemplateResult } from "lit-html";
 import { Observable } from "rxjs";
-import { ECS } from "./ecs"
+import { ECS } from "./ecs.js"
 
 type constructable = { new(...args: any[]): {} }
 interface SceneOptions {

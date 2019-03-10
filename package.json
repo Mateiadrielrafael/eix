@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Mateiadrielrafael/engine#readme",
   "dependencies": {
+    "keycode": "^2.2.0",
     "lit-html": "^1.0.0",
     "rxjs": "^6.4.0",
     "ts-keycode-enum": "^1.0.6"

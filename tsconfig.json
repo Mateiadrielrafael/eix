@@ -19,7 +19,9 @@
         "moduleResolution": "Node",
         "experimentalDecorators": true,
         "downlevelIteration": true,
-        "target":"ESNext"
+        "target": "ESNext",
+        "outDir": "dist",
+        "declaration": true
     },
     "include": [
         "src/*.ts"

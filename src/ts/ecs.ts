@@ -22,10 +22,6 @@ type Component = {
      */
     type: string
     /**
-     * Owner of the component, an entity.
-     */
-    // owner: Entity
-    /**
      * Data the component represents.
      */
     data: any
@@ -35,11 +31,26 @@ type Component = {
     id: number
 }
 
+/**
+ * The data used for working with components (the rest is auto-generated)
+ */
+interface ComponentData{
+    /** 
+     * "Type" of the component, e.g. the sort of data it represents.
+     */
+    type: string
+    /**
+     * Data the component represents.
+     */
+    data: any
+}
+
 export class ECS {
     /** 
      * List of all entities and data attached to them
      */
-    entities: Map<number, Set<Component>> = new Map()
+    private entities: Map<number, Set<Component>> = new Map()
+    private id = 0
 
     /**
      * used to get the needed data from the ecs
@@ -70,4 +81,28 @@ export class ECS {
             observer.complete()
         })
     }
+
+    /**
+     * Adds a new entity to the ecs
+     * @param params the components to be added to the new entity
+     * @returns the id of the new entity
+     */
+    addEntity(...params:ComponentData[]):number{
+        //unique local id
+        let lastId = 0
+
+        //add the entity
+        this.entities.set(this.id++,new Set(
+            params.map(val => ({
+                id:lastId++,
+                type:val.type,
+                data:val.data
+            })) // add an id to the existing data
+        ))
+
+        //return the id
+        return this.id - 1
+    }
 }
+
+export * from "./eixEvent.js"

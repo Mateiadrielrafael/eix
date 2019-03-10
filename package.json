@@ -1,11 +1,11 @@
 {
-  "name": "engine",
+  "name": "eix",
   "version": "1.0.0",
   "description": "OwO",
   "main": "src/main.js",
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/Mateiadrielrafael/engine#readme",
   "dependencies": {
     "lit-html": "^1.0.0",
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.4.0",
+    "ts-keycode-enum": "^1.0.6"
   },
   "devDependencies": {}
 }

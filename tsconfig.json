@@ -20,7 +20,8 @@
         "experimentalDecorators": true,
         "downlevelIteration": true,
         "target": "ESNext",
-        "outDir": "dist"
+        "outDir": "dist",
+        "declaration": true
     },
     "include": [
         "src/*.ts"

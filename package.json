@@ -1,8 +1,8 @@
 {
   "name": "eix",
   "version": "1.0.0",
-  "description": "OwO",
-  "main": "src/main.js",
+  "description": "Eix is a game engine for HTML5 + TypeScript",
+  "main": "main.js",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
@@ -11,11 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/Mateiadrielrafael/engine.git"
   },
-  "keywords": [
-    "idk"
-  ],
   "author": "Matei Adriel",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mateiadrielrafael/engine/issues"
   },
@@ -26,5 +23,10 @@
     "rxjs": "^6.4.0",
     "ts-keycode-enum": "^1.0.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  },
+  "files": [
+    "dist /**/*"
+  ]
 }

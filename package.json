@@ -4,8 +4,7 @@
   "description": "Eix is a game engine for HTML5 + TypeScript",
   "main": "main.js",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

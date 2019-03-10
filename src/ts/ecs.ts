@@ -1,4 +1,5 @@
 import { Observable, Observer } from "rxjs";
+import { EventEmitter } from "./EventEmitter.js";
 
 /**
  * The interface for the data in the array returned by ecs.all
@@ -50,7 +51,16 @@ export class ECS {
      * List of all entities and data attached to them
      */
     private entities: Map<number, Set<Component>> = new Map()
+    
+    /**
+     * used to create unque ids
+     */
     private id = 0
+
+    /**
+     * the main emitter of the ecs
+     */
+    core = new EventEmitter()
 
     /**
      * used to get the needed data from the ecs

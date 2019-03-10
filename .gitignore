@@ -3,3 +3,4 @@ dist
 demos
 src/**/*.js
 src/**/*js.map
+.vscode
